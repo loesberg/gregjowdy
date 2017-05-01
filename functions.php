@@ -105,15 +105,18 @@ add_action( 'widgets_init', 'greg_jowdy_widgets_init' );
  * Enqueue scripts and styles.
  */
 function greg_jowdy_scripts() {
+	
+	// Stylesheet
 	wp_enqueue_style( 'greg-jowdy-style', get_stylesheet_uri() );
 	
+	// Minified and aggregated JS
 	wp_enqueue_script( 'greg-jowdy-script', get_template_directory_uri() . '/js.script.min.js', array( 'jquery' ), time(), true );
-
-/*
-	wp_enqueue_script( 'greg-jowdy-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'greg-jowdy-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-*/
+	
+	// Google Fonts
+	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Cormorant+Garamond|Open+Sans', false );
+	
+	// Fontawesome
+	wp_enqueue_style( 'fontawesome', 'https://use.fontawesome.com/c4628d7a0d.js', false);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
