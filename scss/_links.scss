@@ -1,18 +1,20 @@
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-a {
-	color: royalblue;
+#{$a-tags} {
+	color: $link-color;
+	text-decoration: none;
+	border-bottom: 1px dotted $link-color;
+	
+	.site-title & {
+		color: $text-color;
+		border-bottom: none;
+	}
 }
 
-a:visited {
-	color: purple;
-}
-
-a:hover,
-a:focus,
-a:active {
-	color: midnightblue;
+#{$a-tags-hover} {
+	color: $link-hover-color;
+	border-bottom: 1px solid $link-hover-color;
 }
 
 a:focus {

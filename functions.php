@@ -113,7 +113,7 @@ function greg_jowdy_scripts() {
 	wp_enqueue_script( 'greg-jowdy-script', get_template_directory_uri() . '/js/script.min.js', array( 'jquery' ), time(), true );
 	
 	// Google Fonts
-	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Cormorant+Garamond|Open+Sans', false );
+	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Cormorant+Garamond|Open+Sans:400,400i,600', false );
 	
 	// Fontawesome
 	wp_enqueue_style( 'fontawesome', 'https://use.fontawesome.com/c4628d7a0d.js', false);

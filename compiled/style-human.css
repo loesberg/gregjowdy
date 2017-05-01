@@ -324,6 +324,11 @@ table {
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
+.entry-title {
+  border-top: 1px solid #cdc9c9;
+  border-bottom: 1px solid #cdc9c9;
+}
+
 .sticky {
   display: block;
 }
@@ -437,6 +442,35 @@ embed,
 iframe,
 object {
   max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Tables
+--------------------------------------------------------------*/
+table, th, td {
+  border: 1px solid #cdc9c9;
+}
+
+th, td {
+  padding: 0.7rem;
+}
+
+.site-title {
+  font-size: 4rem;
+  font-style: italic;
+}
+
+#masthead, h1, h2 {
+  font-family: "Cormorant Garamond", serif;
+}
+
+.entry-content {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+
+.entry-title {
+  text-align: center;
 }
 
 /*--------------------------------------------------------------
@@ -799,18 +833,19 @@ textarea {
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-a {
-  color: royalblue;
+a, a:link, a:visited {
+  color: #3399e0;
+  text-decoration: none;
+  border-bottom: 1px dotted #3399e0;
+}
+.site-title a, .site-title a:link, .site-title a:visited {
+  color: black;
+  border-bottom: none;
 }
 
-a:visited {
-  color: purple;
-}
-
-a:hover,
-a:focus,
-a:active {
-  color: midnightblue;
+a:hover, a:active, a:focus {
+  color: #e2a316;
+  border-bottom: 1px solid #e2a316;
 }
 
 a:focus {

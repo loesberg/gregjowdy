@@ -7,6 +7,12 @@
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
+
+.entry-title {
+	border-top: 1px solid $light-gray;
+	border-bottom: 1px solid $light-gray;
+}
+
 .sticky {
 	display: block;
 }
@@ -121,4 +127,15 @@ embed,
 iframe,
 object {
 	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Tables
+--------------------------------------------------------------*/
+table, th, td {
+	border: 1px solid $light-gray;
+}
+
+th, td {
+	padding: 0.7rem;
 }

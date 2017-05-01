@@ -1,3 +1,22 @@
+.site-title {
+	font-size: 4rem;
+	font-style: italic;
+}
+
+#masthead, h1, h2 {
+	font-family: $header-font-stack;
+}
+
+.entry-content {
+	font-family: $body-font-stack;
+	font-weight: 300;
+}
+
+.entry-title {
+	text-align: center;
+}
+
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
