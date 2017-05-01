@@ -106,10 +106,14 @@ add_action( 'widgets_init', 'greg_jowdy_widgets_init' );
  */
 function greg_jowdy_scripts() {
 	wp_enqueue_style( 'greg-jowdy-style', get_stylesheet_uri() );
+	
+	wp_enqueue_script( 'greg-jowdy-script', get_template_directory_uri() . '/js.script.min.js', array( 'jquery' ), time(), true );
 
+/*
 	wp_enqueue_script( 'greg-jowdy-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'greg-jowdy-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+*/
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
