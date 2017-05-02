@@ -152,6 +152,6 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 /**
-* Load Custom Footer feature.
+* Load theme options page.
 */
-require get_template_directory() . '/inc/custom-footer.php';
+require get_template_directory() . '/inc/theme-options.php';
