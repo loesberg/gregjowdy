@@ -22,6 +22,8 @@ function greg_jowdy_footer_content_page() {
 	?>
 	<div class="wrap">
 		<h1>Footer Content</h1>
+		<?php settings_errors(); ?>
+		<p>Use this form to edit the content that appears in the website footer.</p>
 		<form method="post" action="options.php">
 		<?php
 			settings_fields( 'greg_jowdy_theme_settings_group' );
@@ -29,8 +31,9 @@ function greg_jowdy_footer_content_page() {
 			// Render the WP Editor
 			$settings = array(
 				'textarea_name' => 'greg_jowdy_footer_content',
-				'textarea_rows' => 15,
+				'textarea_rows' => 5,
 				'quicktags' => false,
+				'media_buttons' => false,
 			);
 			wp_editor( $current_text, 'content', $settings );
 		?>
