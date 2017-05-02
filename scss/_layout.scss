@@ -4,6 +4,22 @@
 	margin: 0 auto;
 }
 
+.site-title {
+	margin: 0;
+}
+
+.site-description {
+	margin: 0 0 0 0.5rem;
+}
+
+ul, ol {
+	margin-left: 1em;
+}
+
+li > ul, li > ol {
+	margin-left: 0;
+}
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
