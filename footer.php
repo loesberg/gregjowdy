@@ -15,9 +15,7 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'greg-jowdy' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'greg-jowdy' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'greg-jowdy' ), 'greg-jowdy', '<a href="https://automattic.com/" rel="designer">Underscores.me</a>' ); ?>
+			<?php echo get_option( 'greg_jowdy_footer_content', '<p>All content &copy; ' . date('Y') . ' Greg Jowdy.<br />All rights reserved.</p>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
