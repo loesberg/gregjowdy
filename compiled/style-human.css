@@ -458,13 +458,14 @@ th, td {
 .site-title {
   font-size: 4rem;
   font-style: italic;
+  font-weight: normal;
 }
 
 #masthead, h1, h2 {
   font-family: "Cormorant Garamond", serif;
 }
 
-.entry-content {
+.entry-content, .entry-meta, .entry-footer {
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
 }
@@ -836,9 +837,8 @@ textarea {
 a, a:link, a:visited {
   color: #3399e0;
   text-decoration: none;
-  border-bottom: 1px dotted #3399e0;
 }
-.site-title a, .site-title a:link, .site-title a:visited {
+.site-title a, .main-navigation a, .site-title a:link, .main-navigation a:link, .site-title a:visited, .main-navigation a:visited {
   color: black;
   border-bottom: none;
 }
@@ -846,6 +846,9 @@ a, a:link, a:visited {
 a:hover, a:active, a:focus {
   color: #e2a316;
   border-bottom: 1px solid #e2a316;
+}
+.site-title a:hover, .main-navigation a:hover, .site-title a:active, .main-navigation a:active, .site-title a:focus, .main-navigation a:focus {
+  color: #3399e0;
 }
 
 a:focus {

@@ -1,13 +1,14 @@
 .site-title {
 	font-size: 4rem;
 	font-style: italic;
+	font-weight: normal;
 }
 
 #masthead, h1, h2 {
 	font-family: $header-font-stack;
 }
 
-.entry-content {
+.entry-content, .entry-meta, .entry-footer {
 	font-family: $body-font-stack;
 	font-weight: 300;
 }

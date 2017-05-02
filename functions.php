@@ -113,7 +113,7 @@ function greg_jowdy_scripts() {
 	wp_enqueue_script( 'greg-jowdy-script', get_template_directory_uri() . '/js/script.min.js', array( 'jquery' ), time(), true );
 	
 	// Google Fonts
-	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Cormorant+Garamond|Open+Sans:400,400i,600', false );
+	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,400i|Open+Sans:400,400i,600', false );
 	
 	// Fontawesome
 	wp_enqueue_style( 'fontawesome', 'https://use.fontawesome.com/c4628d7a0d.js', false);
@@ -129,7 +129,7 @@ add_action( 'wp_enqueue_scripts', 'greg_jowdy_scripts' );
 /**
  * Implement the Custom Header feature.
  */
-require get_template_directory() . '/inc/custom-header.php';
+// require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
@@ -150,3 +150,8 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+* Load Custom Footer feature.
+*/
+require get_template_directory() . '/inc/custom-footer.php';
