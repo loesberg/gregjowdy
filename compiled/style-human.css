@@ -321,6 +321,14 @@ table {
   margin: 0 auto;
 }
 
+.site-title {
+  margin: 0;
+}
+
+.site-description {
+  margin: 0 0 0 0.5rem;
+}
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
@@ -455,10 +463,18 @@ th, td {
   padding: 0.7rem;
 }
 
+.site-branding {
+  text-align: center;
+}
+
 .site-title {
-  font-size: 4rem;
+  font-size: 5rem;
   font-style: italic;
   font-weight: normal;
+}
+
+.site-description {
+  font-size: 1.3rem;
 }
 
 #masthead, h1, h2 {
