@@ -859,7 +859,7 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a, a:link, a:visited {
-  color: #3399e0;
+  color: #1c78b9;
   text-decoration: none;
 }
 .site-title a, .main-navigation a, .site-title a:link, .main-navigation a:link, .site-title a:visited, .main-navigation a:visited {
@@ -872,7 +872,7 @@ a:hover, a:active, a:focus {
   border-bottom: 1px solid #e2a316;
 }
 .site-title a:hover, .main-navigation a:hover, .site-title a:active, .main-navigation a:active, .site-title a:focus, .main-navigation a:focus {
-  color: #3399e0;
+  color: #1c78b9;
 }
 
 a:focus {
