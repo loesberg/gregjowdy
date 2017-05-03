@@ -124,6 +124,16 @@ function greg_jowdy_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'greg_jowdy_scripts' );
 
+/**
+* Enqueue admin scripts
+*/
+function greg_jowdy_admin_scripts() {
+	wp_enqueue_media();
+	wp_register_script( 'greg-jowdy-admin-script', get_template_directory_uri() . '/admin/js/box-options.js', array( 'jquery' ), time(), true );
+	wp_enqueue_script( 'greg-jowdy-admin-script' );
+}
+add_action( 'admin_enqueue_scripts', 'greg_jowdy_admin_scripts' );
+
 
 
 /**

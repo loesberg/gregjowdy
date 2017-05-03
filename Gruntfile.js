@@ -47,7 +47,7 @@ module.exports = function(grunt) {
 		* Uglify
 		*/
 		uglify: {
-		  build: {
+		  front: {
 		    files: {
 			  'js/script.min.js': 'js/files/*.js'
 		    },
@@ -55,7 +55,18 @@ module.exports = function(grunt) {
 			  sourceMap: true,
 			  sourceMapName: 'js/sourcemap.map'
 		    }
-		  }	
+		  },
+		  admin: {
+/*
+			files: {
+				'admin/js/script.admin.min.js': 'admin/js/files/*.js'
+			},
+			options: {
+			  sourceMap: true,
+			  sourceMapName: 'admin/js/sourcemap.map'
+			}
+*/
+		  }
 		},
 
 	  	/**
@@ -67,7 +78,7 @@ module.exports = function(grunt) {
 		    tasks: ['sass', 'autoprefixer']
 		  },
 		  js: {
-		    files: 'js/files/*.js',
+		    files: ['js/files/*.js', 'admin/js/files/*.js'],
 		    tasks: ['uglify']
 		  }
 		}
