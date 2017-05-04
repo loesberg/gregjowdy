@@ -24,6 +24,7 @@ function greg_jowdy_register_theme_settings() {
 	register_setting( 'greg_jowdy_footer_content_group', 'greg_jowdy_footer_content' );
 	
 	// Home page content custom settings
+	register_setting( 'greg_jowdy_home_page_content_group', 'greg_jowdy_home_page_title' );
 	register_setting( 'greg_jowdy_home_page_content_group', 'greg_jowdy_home_page_main_content' );
 	register_setting( 'greg_jowdy_home_page_content_group', 'greg_jowdy_home_page_secondary_content' );
 	
@@ -157,6 +158,8 @@ function greg_jowdy_home_page_content_page() {
 				settings_fields( 'greg_jowdy_home_page_content_group' );
 				do_settings_sections( 'greg_jowdy_footer_content_group' );
 			?>
+			<h2>Home Page Title</h2>
+			<input type="text" name="greg_jowdy_home_page_title" size="50" value="<?php echo get_option( 'greg_jowdy_home_page_title'); ?>" />
 			<h2>Main Content Area</h2>
 			<p>Use this field to update the main content area on the home page.</p>
 			<?php

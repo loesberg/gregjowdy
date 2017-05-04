@@ -72,7 +72,7 @@ function greg_jowdy_setup() {
 /**
 * Custom image sizes
 */
-add_image_size( 'homepage-box-image', 600, 400, true );
+add_image_size( 'homepage_box_image', 600, 400, true );
 
 endif;
 add_action( 'after_setup_theme', 'greg_jowdy_setup' );
@@ -139,6 +139,27 @@ function greg_jowdy_admin_scripts() {
 	wp_enqueue_script( 'greg-jowdy-admin-script' );
 }
 add_action( 'admin_enqueue_scripts', 'greg_jowdy_admin_scripts' );
+
+/**
+* Display home page boxes
+*/
+function greg_jowdy_show_home_page_boxes() {
+	
+	$display = "";
+	
+	$boxes = get_option( 'greg_jowdy_home_page_boxes' );
+	
+	for ( $i = 0; $i <= 2; $i++ ) {
+		$display .= '<div class="home-page-box">';
+		$display .= '<a href="' . get_permalink( $boxes['link'][$i] ) . '">';
+		$display .= wp_get_attachment_image( $boxes['image'][$i], 'thumbnail', false, array( 'class' => 'home-page-box-image' ) );
+		$display .= '<p class="home-page-box-text">' . $boxes['text'][$i] . '</p>';
+		$display .= '</a>';
+		$display .= '</div>';
+	}
+	
+	return $display;
+}
 
 
 
