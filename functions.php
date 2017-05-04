@@ -68,6 +68,12 @@ function greg_jowdy_setup() {
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 }
+
+/**
+* Custom image sizes
+*/
+add_image_size( 'homepage-box-image', 600, 400, true );
+
 endif;
 add_action( 'after_setup_theme', 'greg_jowdy_setup' );
 
