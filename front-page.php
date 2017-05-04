@@ -21,10 +21,10 @@ get_header(); ?>
 				<?php echo get_option( 'greg_jowdy_home_page_main_content', 'Enter some content here!' ); ?>
 			</div>
 			
-			<?php if (get_option( 'greg_jowdy_home_page_secondary_content' ) ) : ?>
+			<?php if ( greg_jowdy_show_home_page_secondary_content() ) : ?>
 			
 			<div id="home-page-secondary">
-				<?php echo get_option( 'greg_jowdy_home_page_secondary_content' ); ?>
+				<?php echo greg_jowdy_show_home_page_secondary_content(); ?>
 			</div>
 			
 			<?php endif; ?>

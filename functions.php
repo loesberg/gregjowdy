@@ -152,13 +152,31 @@ function greg_jowdy_show_home_page_boxes() {
 	for ( $i = 0; $i <= 2; $i++ ) {
 		$display .= '<div class="home-page-box">';
 		$display .= '<a href="' . get_permalink( $boxes['link'][$i] ) . '">';
-		$display .= wp_get_attachment_image( $boxes['image'][$i], 'thumbnail', false, array( 'class' => 'home-page-box-image' ) );
+		$display .= wp_get_attachment_image( $boxes['image'][$i], 'homepage_box_image', false, array( 'class' => 'home-page-box-image' ) );
 		$display .= '<p class="home-page-box-text">' . $boxes['text'][$i] . '</p>';
 		$display .= '</a>';
 		$display .= '</div>';
 	}
 	
 	return $display;
+}
+
+/**
+* Display home page secondary content
+*/
+function greg_jowdy_show_home_page_secondary_content() {
+	
+	$display = false;
+	
+	$secondary_content = get_option( 'greg_jowdy_home_page_secondary_content' );
+	
+	if ( $secondary_content && $secondary_content != '' ) {
+		$display = $secondary_content;
+	} 
+	
+	return $display;
+	
+	
 }
 
 
