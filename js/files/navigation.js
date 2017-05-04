@@ -12,7 +12,7 @@
 		return;
 	}
 
-	button = container.getElementsByTagName( 'button' )[0];
+	button = document.getElementById( 'menu-button' );
 	if ( 'undefined' === typeof button ) {
 		return;
 	}

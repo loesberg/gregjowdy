@@ -122,7 +122,7 @@ function greg_jowdy_scripts() {
 	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,400i|Open+Sans:400,400i,600', false );
 	
 	// Fontawesome
-	wp_enqueue_style( 'fontawesome', 'https://use.fontawesome.com/c4628d7a0d.js', false);
+	wp_enqueue_script( 'fontawesome', 'https://use.fontawesome.com/c4628d7a0d.js', false);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -175,8 +175,6 @@ function greg_jowdy_show_home_page_secondary_content() {
 	} 
 	
 	return $display;
-	
-	
 }
 
 

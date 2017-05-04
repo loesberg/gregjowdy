@@ -13,10 +13,11 @@
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
+	text-align: center;
+	font-size: 2rem;
 }
 
 .main-navigation li {
-	float: left;
 	position: relative;
 }
 
@@ -81,8 +82,8 @@
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
+@media screen and (min-width: 750px) {
+	.menu-toggle.fa {
 		display: none;
 	}
 	.main-navigation ul {
