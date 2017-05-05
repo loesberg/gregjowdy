@@ -44,6 +44,9 @@
 			<i id="menu-button" class="menu-toggle fa fa-bars fa-2x" aria-controls="primary-menu" aria-expanded="false"></i>
 			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
+		<div class="contact-button-box">
+			<?php echo greg_jowdy_contact_button(); ?>
+		</div>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

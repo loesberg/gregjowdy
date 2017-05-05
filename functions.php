@@ -177,6 +177,16 @@ function greg_jowdy_show_home_page_secondary_content() {
 	return $display;
 }
 
+/**
+* Contact button
+*/
+function greg_jowdy_contact_button() {
+	
+	$button = "<button class='contact-button'>Contact Me</button>";
+	
+	return $button;
+}
+add_shortcode( 'contact_button', 'greg_jowdy_contact_button' );
 
 
 /**
