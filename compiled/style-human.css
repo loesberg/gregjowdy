@@ -476,12 +476,23 @@ th, td {
 }
 
 @media only screen and (min-width: 750px) {
+  .main-navigation {
+    float: none;
+    margin: 0.5em 0 0 0.4em;
+  }
+
+  .contact-button-box {
+    position: absolute;
+    top: 14px;
+    right: 0;
+  }
+}
+@media only screen and (min-width: 960px) {
   .site-branding {
     width: 335px;
     float: left;
   }
-}
-@media only screen and (min-width: 960px) {
+
   #site-navigation {
     position: absolute;
     top: 11px;
@@ -665,7 +676,7 @@ big {
   .nav-menu > li {
     float: left;
     font-size: 0.7em;
-    margin-left: 1.3em;
+    margin: 0 1.3em 0 0;
     text-transform: uppercase;
   }
 
@@ -700,6 +711,7 @@ big {
 @media only screen and (min-width: 960px) {
   .nav-menu > li {
     float: right;
+    margin: 0 0 0 1.3em;
   }
 }
 .site-main .comment-navigation,

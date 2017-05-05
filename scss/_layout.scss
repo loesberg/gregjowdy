@@ -163,18 +163,27 @@ th, td {
 @media only screen and
 (min-width: 750px) {
 	
-	.site-branding {
-		width: 335px;
-		float: left;
+	
+	.main-navigation {
+		float: none;
+		margin: 0.5em 0 0 0.4em;
 	}
 	
-	#site-navigation {
-		
+	.contact-button-box {
+		position: absolute;
+		top: 14px;
+		right: 0;
 	}
 }
 
 @media only screen and
 (min-width: 960px) {
+	
+	.site-branding {
+		width: 335px;
+		float: left;
+	}
+
 	
 	#site-navigation {
 		position: absolute;
