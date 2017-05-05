@@ -51,6 +51,10 @@ h6 {
 	clear: both;
 }
 
+.page-title {
+	text-align: center;
+}
+
 p {
 	margin-bottom: 1.5em;
 }
@@ -105,4 +109,12 @@ ins {
 
 big {
 	font-size: 125%;
+}
+
+@media only screen and
+(min-width: 750px) {
+	
+	.site-branding {
+		text-align: left;
+	}
 }

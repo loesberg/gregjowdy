@@ -71,16 +71,25 @@
 	
 	.nav-menu > li {
 		float: left;
-		font-size: 1.3rem;
+		font-size: 0.7em;
+		margin-left: 1.3em;
+		text-transform: uppercase;
 	}
 	
 	.main-navigation ul ul {
 		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 		float: left;
 		position: absolute;
-		top: 1.5em;
+		padding: 0.5em 0.5em 0.75em 0.5em;
 		left: -999em;
 		z-index: 99999;
+		background: white;
+		text-align: left;
+		
+		> li {
+			padding-bottom: 0.5em;
+		}
+		
 	}
 	
 	.main-navigation ul ul ul {
@@ -95,6 +104,16 @@
 	.main-navigation ul ul li:hover > ul,
 	.main-navigation ul ul li.focus > ul {
 		left: 100%;
+	}
+	
+}
+
+@media only screen and 
+(min-width: 960px) {
+	
+	
+	.nav-menu > li {
+		float: right;
 	}
 	
 }

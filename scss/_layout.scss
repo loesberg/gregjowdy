@@ -1,7 +1,11 @@
 #page {
 	width: 95%;
-	max-width: 1000px;
+	max-width: 1200px;
 	margin: 0 auto;
+}
+
+#masthead {
+	position: relative;
 }
 
 .site-title {
@@ -24,7 +28,7 @@ li > ul, li > ol {
 ## Posts and pages
 --------------------------------------------------------------*/
 
-.entry-title {
+.entry-title, .page-title {
 	border-top: 1px solid $light-gray;
 	border-bottom: 1px solid $light-gray;
 }
@@ -154,4 +158,32 @@ table, th, td {
 
 th, td {
 	padding: 0.7rem;
+}
+
+@media only screen and
+(min-width: 750px) {
+	
+	.site-branding {
+		width: 335px;
+		float: left;
+	}
+	
+	#site-navigation {
+		
+	}
+}
+
+@media only screen and
+(min-width: 960px) {
+	
+	#site-navigation {
+		position: absolute;
+		top: 11px;
+	}
+	
+	.contact-button-box {
+		position: absolute;
+		top: 68px;
+		right: 0;
+	}
 }

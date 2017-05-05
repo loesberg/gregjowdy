@@ -317,8 +317,12 @@ table {
 
 #page {
   width: 95%;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
+}
+
+#masthead {
+  position: relative;
 }
 
 .site-title {
@@ -340,7 +344,7 @@ li > ul, li > ol {
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
-.entry-title {
+.entry-title, .page-title {
   border-top: 1px solid #cdc9c9;
   border-bottom: 1px solid #cdc9c9;
 }
@@ -471,6 +475,24 @@ th, td {
   padding: 0.7rem;
 }
 
+@media only screen and (min-width: 750px) {
+  .site-branding {
+    width: 335px;
+    float: left;
+  }
+}
+@media only screen and (min-width: 960px) {
+  #site-navigation {
+    position: absolute;
+    top: 11px;
+  }
+
+  .contact-button-box {
+    position: absolute;
+    top: 68px;
+    right: 0;
+  }
+}
 .site-branding {
   text-align: center;
 }
@@ -521,6 +543,10 @@ h4,
 h5,
 h6 {
   clear: both;
+}
+
+.page-title {
+  text-align: center;
 }
 
 p {
@@ -579,6 +605,11 @@ big {
   font-size: 125%;
 }
 
+@media only screen and (min-width: 750px) {
+  .site-branding {
+    text-align: left;
+  }
+}
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
@@ -633,16 +664,23 @@ big {
 
   .nav-menu > li {
     float: left;
-    font-size: 1.3rem;
+    font-size: 0.7em;
+    margin-left: 1.3em;
+    text-transform: uppercase;
   }
 
   .main-navigation ul ul {
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
     float: left;
     position: absolute;
-    top: 1.5em;
+    padding: 0.5em 0.5em 0.75em 0.5em;
     left: -999em;
     z-index: 99999;
+    background: white;
+    text-align: left;
+  }
+  .main-navigation ul ul > li {
+    padding-bottom: 0.5em;
   }
 
   .main-navigation ul ul ul {
@@ -657,6 +695,11 @@ big {
   .main-navigation ul ul li:hover > ul,
   .main-navigation ul ul li.focus > ul {
     left: 100%;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .nav-menu > li {
+    float: right;
   }
 }
 .site-main .comment-navigation,
@@ -766,6 +809,11 @@ textarea {
   width: 100%;
 }
 
+@media only screen and (min-width: 750px) {
+  .contact-button {
+    width: 300px;
+  }
+}
 /*--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
