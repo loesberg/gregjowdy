@@ -11,3 +11,13 @@ $text-color: black;
 // Tags
 $a-tags: "a, a:link, a:visited";
 $a-tags-hover: "a:hover, a:active, a:focus";
+
+// Content Parts
+$content_parts: ".entry-content, .entry-meta, .entry-footer, .comments-area";
+
+// Buttons
+$all_buttons: "button, input[type='button'], input[type='reset'], input[type='submit']";
+
+// Breakpoints
+$tablet: "750px";
+$desktop: "960px";

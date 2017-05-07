@@ -1,10 +1,7 @@
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+#{$all_buttons} {
 	border-radius: 5px;
 	background: $link-color;
 	color: white;
@@ -15,24 +12,10 @@ input[type="submit"] {
 	width: 100%;
 	border: none;
 	
-}
-
-button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover {
-	border-color: #ccc #bbb #aaa;
-}
-
-button:focus,
-input[type="button"]:focus,
-input[type="reset"]:focus,
-input[type="submit"]:focus,
-button:active,
-input[type="button"]:active,
-input[type="reset"]:active,
-input[type="submit"]:active {
-	border-color: #aaa #bbb #bbb;
+	&:hover, &:active, &:focus {
+		border-color: #ccc #bbb #aaa;
+	}
+	
 }
 
 input[type="text"],
@@ -89,9 +72,22 @@ textarea {
 }
 
 @media only screen and
-(min-width: 750px) {
+(min-width: $tablet) {
 	
-	.contact-button {
+	button,
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"] {
 		width: 300px;
+	}
+}
+
+@media only screen and
+(min-width: $desktop) {
+	
+	#{$all-buttons} {
+		height: 35px;
+		padding: 0;
+		font-size: 1.4rem;
 	}
 }

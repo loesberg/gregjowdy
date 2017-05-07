@@ -378,6 +378,13 @@ li > ul, li > ol {
   margin: 0 0 1.5em;
 }
 
+.entry-footer {
+  margin-left: 1em;
+}
+.entry-footer span {
+  display: block;
+}
+
 /*--------------------------------------------------------------
 # Clearings
 --------------------------------------------------------------*/
@@ -476,11 +483,6 @@ th, td {
 }
 
 @media only screen and (min-width: 750px) {
-  .main-navigation {
-    float: none;
-    margin: 0.5em 0 0 0.4em;
-  }
-
   .contact-button-box {
     position: absolute;
     top: 14px;
@@ -489,19 +491,18 @@ th, td {
 }
 @media only screen and (min-width: 960px) {
   .site-branding {
-    width: 335px;
     float: left;
-  }
-
-  #site-navigation {
-    position: absolute;
-    top: 11px;
   }
 
   .contact-button-box {
     position: absolute;
-    top: 68px;
+    top: 90px;
     right: 0;
+  }
+
+  .entry-content, .entry-meta, .entry-footer, .comments-area {
+    width: 900px;
+    margin: 0 auto;
   }
 }
 .site-branding {
@@ -530,6 +531,11 @@ th, td {
 
 .entry-title {
   text-align: center;
+}
+
+.entry-footer {
+  font-family: "Cormorant Garamond", serif;
+  margin-left: 1em;
 }
 
 /*--------------------------------------------------------------
@@ -625,10 +631,14 @@ big {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
+  border-top: 1px solid #cdc9c9;
+  border-bottom: 1px solid #cdc9c9;
   clear: both;
   display: block;
   float: left;
   width: 100%;
+  text-align: center;
+  margin: 1em 0;
 }
 
 .main-navigation ul {
@@ -669,6 +679,12 @@ big {
     display: none;
   }
 
+  .main-navigation {
+    float: none;
+    margin: 0.5em 0 0 0.4em;
+    text-align: left;
+    border: none;
+  }
   .main-navigation ul {
     display: block;
   }
@@ -709,6 +725,11 @@ big {
   }
 }
 @media only screen and (min-width: 960px) {
+  .main-navigation {
+    position: absolute;
+    top: 11px;
+  }
+
   .nav-menu > li {
     float: right;
     margin: 0 0 0 1.3em;
@@ -739,10 +760,7 @@ big {
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+button, input[type='button'], input[type='reset'], input[type='submit'] {
   border-radius: 5px;
   background: #1c78b9;
   color: white;
@@ -753,23 +771,8 @@ input[type="submit"] {
   width: 100%;
   border: none;
 }
-
-button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover {
+button:hover, button:active, button:focus, input[type='button']:hover, input[type='button']:active, input[type='button']:focus, input[type='reset']:hover, input[type='reset']:active, input[type='reset']:focus, input[type='submit']:hover, input[type='submit']:active, input[type='submit']:focus {
   border-color: #ccc #bbb #aaa;
-}
-
-button:focus,
-input[type="button"]:focus,
-input[type="reset"]:focus,
-input[type="submit"]:focus,
-button:active,
-input[type="button"]:active,
-input[type="reset"]:active,
-input[type="submit"]:active {
-  border-color: #aaa #bbb #bbb;
 }
 
 input[type="text"],
@@ -822,8 +825,18 @@ textarea {
 }
 
 @media only screen and (min-width: 750px) {
-  .contact-button {
+  button,
+  input[type="button"],
+  input[type="reset"],
+  input[type="submit"] {
     width: 300px;
+  }
+}
+@media only screen and (min-width: 960px) {
+  button, input[type='button'], input[type='reset'], input[type='submit'] {
+    height: 35px;
+    padding: 0;
+    font-size: 1.4rem;
   }
 }
 /*--------------------------------------------------------------
@@ -850,6 +863,7 @@ textarea {
 
 .wp-caption .wp-caption-text {
   margin: 0.8075em 0;
+  font-size: 0.8em;
 }
 
 .wp-caption-text {
@@ -933,7 +947,7 @@ a, a:link, a:visited {
   color: #1c78b9;
   text-decoration: none;
 }
-.site-title a, .main-navigation a, .site-title a:link, .main-navigation a:link, .site-title a:visited, .main-navigation a:visited {
+.site-title a, .main-navigation a, .entry-title a, .site-title a:link, .main-navigation a:link, .entry-title a:link, .site-title a:visited, .main-navigation a:visited, .entry-title a:visited {
   color: black;
   border-bottom: none;
 }
@@ -942,7 +956,7 @@ a:hover, a:active, a:focus {
   color: #e2a316;
   border-bottom: 1px solid #e2a316;
 }
-.site-title a:hover, .main-navigation a:hover, .site-title a:active, .main-navigation a:active, .site-title a:focus, .main-navigation a:focus {
+.site-title a:hover, .main-navigation a:hover, .entry-title a:hover, .site-title a:active, .main-navigation a:active, .entry-title a:active, .site-title a:focus, .main-navigation a:focus, .entry-title a:focus {
   color: #1c78b9;
 }
 
