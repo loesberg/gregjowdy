@@ -482,11 +482,28 @@ th, td {
   padding: 0.7rem;
 }
 
+/*--------------------------------------------------------------
+# Home Page Boxes
+--------------------------------------------------------------*/
+.home-page-box-text {
+  margin-top: 0;
+}
+
 @media only screen and (min-width: 750px) {
   .contact-button-box {
     position: absolute;
     top: 14px;
     right: 0;
+  }
+
+  #home-page-boxes {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .home-page-box {
+    width: 28%;
+    margin: 0 1em;
   }
 }
 @media only screen and (min-width: 960px) {
@@ -535,6 +552,16 @@ th, td {
 
 .entry-footer {
   font-family: "Cormorant Garamond", serif;
+}
+
+.home-page-box {
+  text-align: center;
+}
+
+.home-page-box-text {
+  font-family: "Cormorant Garamond", serif;
+  text-transform: uppercase;
+  font-size: 1.5em;
 }
 
 /*--------------------------------------------------------------
@@ -624,6 +651,10 @@ big {
 @media only screen and (min-width: 750px) {
   .site-branding {
     text-align: left;
+  }
+
+  .home-page-box-text {
+    font-size: 1.2em;
   }
 }
 /*--------------------------------------------------------------
@@ -946,7 +977,7 @@ a, a:link, a:visited {
   color: #1c78b9;
   text-decoration: none;
 }
-.site-title a, .main-navigation a, .entry-title a, .site-title a:link, .main-navigation a:link, .entry-title a:link, .site-title a:visited, .main-navigation a:visited, .entry-title a:visited {
+.site-title a, .main-navigation a, .entry-title a, .home-page-box a, .site-title a:link, .main-navigation a:link, .entry-title a:link, .home-page-box a:link, .site-title a:visited, .main-navigation a:visited, .entry-title a:visited, .home-page-box a:visited {
   color: black;
   border-bottom: none;
 }
@@ -955,7 +986,7 @@ a:hover, a:active, a:focus {
   color: #e2a316;
   border-bottom: 1px solid #e2a316;
 }
-.site-title a:hover, .main-navigation a:hover, .entry-title a:hover, .site-title a:active, .main-navigation a:active, .entry-title a:active, .site-title a:focus, .main-navigation a:focus, .entry-title a:focus {
+.site-title a:hover, .main-navigation a:hover, .entry-title a:hover, .home-page-box a:hover, .site-title a:active, .main-navigation a:active, .entry-title a:active, .home-page-box a:active, .site-title a:focus, .main-navigation a:focus, .entry-title a:focus, .home-page-box a:focus {
   color: #1c78b9;
 }
 

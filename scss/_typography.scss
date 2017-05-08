@@ -30,6 +30,16 @@
 	font-family: $header_font_stack;
 }
 
+.home-page-box {
+	text-align: center;
+}
+
+.home-page-box-text {
+	font-family: $header_font_stack;
+	text-transform: uppercase;
+	font-size: 1.5em;
+}
+
 
 /*--------------------------------------------------------------
 # Typography
@@ -120,5 +130,9 @@ big {
 	
 	.site-branding {
 		text-align: left;
+	}
+	
+	.home-page-box-text {
+		font-size: 1.2em;
 	}
 }

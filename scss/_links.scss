@@ -5,7 +5,7 @@
 	color: $link-color;
 	text-decoration: none;
 	
-	.site-title &, .main-navigation &, .entry-title &  {
+	.site-title &, .main-navigation &, .entry-title &, .home-page-box &  {
 		color: $text-color;
 		border-bottom: none;
 	}
@@ -15,7 +15,7 @@
 	color: $link-hover-color;
 	border-bottom: 1px solid $link-hover-color;
 	
-	.site-title &, .main-navigation &, .entry-title & {
+	.site-title &, .main-navigation &, .entry-title &, .home-page-box & {
 		color: $link-color;
 	}
 }

@@ -167,6 +167,17 @@ th, td {
 	padding: 0.7rem;
 }
 
+/*--------------------------------------------------------------
+# Home Page Boxes
+--------------------------------------------------------------*/
+
+.home-page-box-text {
+	margin-top: 0;
+}
+
+
+
+
 @media only screen and
 (min-width: $tablet) {
 		
@@ -174,6 +185,16 @@ th, td {
 		position: absolute;
 		top: 14px;
 		right: 0;
+	}
+	
+	#home-page-boxes {
+		display: flex;
+		justify-content: space-around;
+	}
+	
+	.home-page-box {
+		width: 28%;
+		margin: 0 1em;
 	}
 }
 
@@ -196,3 +217,4 @@ th, td {
 	}
 	
 }
+
