@@ -142,6 +142,39 @@ function greg_jowdy_admin_scripts() {
 add_action( 'admin_enqueue_scripts', 'greg_jowdy_admin_scripts' );
 
 /**
+* Get homepage, secondary, and footer content
+*/
+function greg_jowdy_get_custom_content( $location ) {
+	
+	$display = false;
+		
+	switch ( $location ) {
+		case 'home_page_primary':
+			$option = 'greg_jowdy_home_page_main_content';
+			break;
+			
+		case 'home_page_secondary':
+			$option = 'greg_jowdy_home_page_secondary_content';
+			break;
+			
+		case 'footer':
+			$option = 'greg_jowdy_footer_content';
+			break;
+			
+		default:
+			$option = 'none';
+	}
+	
+	$content = get_option( $option );
+	
+	if ( $content && $content != '') {
+		$display = apply_filters( 'the_content', get_option( $option ) );	
+	}
+	
+	return $display;
+}
+
+/**
 * Display home page boxes
 */
 function greg_jowdy_show_home_page_boxes() {
@@ -188,6 +221,17 @@ function greg_jowdy_contact_button() {
 	return $button;
 }
 add_shortcode( 'contact_button', 'greg_jowdy_contact_button' );
+
+/**
+* Shortcode for getting the full year (mostly for the footer)
+*/
+function greg_jowdy_get_year() {
+	
+	$year = date( 'Y' );
+	
+	return $year;
+}
+add_shortcode( 'copyright_year', 'greg_jowdy_get_year' );
 
 
 /**

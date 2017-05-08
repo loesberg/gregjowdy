@@ -17,17 +17,20 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<h1 class="page-title"><?php echo get_option( 'greg_jowdy_home_page_title', 'Welcome' ); ?></h1>
-			<div id="home-page-main-content">
-				<?php echo get_option( 'greg_jowdy_home_page_main_content', 'Enter some content here!' ); ?>
+			<div id="home-page-main" class="clear">
+				<?php echo greg_jowdy_get_custom_content( 'home_page_primary' ); ?>
 			</div>
 			
-			<?php if ( greg_jowdy_show_home_page_secondary_content() ) : ?>
+			<?php if ( greg_jowdy_get_custom_content( 'home_page_secondary') ) : ?>
+			<div class="border"></div>
 			
 			<div id="home-page-secondary">
-				<?php echo greg_jowdy_show_home_page_secondary_content(); ?>
+				<?php echo greg_jowdy_get_custom_content( 'home_page_secondary'); ?>
 			</div>
 			
 			<?php endif; ?>
+			
+			<div class="border"></div>
 
 			<div id="home-page-boxes">
 				<?php echo greg_jowdy_show_home_page_boxes(); ?>					

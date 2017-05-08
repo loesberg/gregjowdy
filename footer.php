@@ -15,7 +15,7 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<?php echo get_option( 'greg_jowdy_footer_content', '<p>All content &copy; ' . date('Y') . ' Greg Jowdy.<br />All rights reserved.</p>' ); ?>
+			<?php echo greg_jowdy_get_custom_content( 'footer' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

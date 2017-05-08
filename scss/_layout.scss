@@ -16,12 +16,22 @@
 	margin: 0 0 0 0.5rem;
 }
 
+.site-footer {
+	padding-top: 2rem;
+	border-top: 1px solid $light-gray;
+}
+
 ul, ol {
 	margin-left: 1em;
 }
 
 li > ul, li > ol {
 	margin-left: 0;
+}
+
+.border {
+	height: 1px;
+	border-top: 1px solid $light-gray;
 }
 
 /*--------------------------------------------------------------
@@ -171,6 +181,10 @@ th, td {
 # Home Page Boxes
 --------------------------------------------------------------*/
 
+#home-page-boxes {
+	padding: 2em 0;
+}
+
 .home-page-box-text {
 	margin-top: 0;
 }
@@ -196,6 +210,12 @@ th, td {
 		width: 28%;
 		margin: 0 1em;
 	}
+	
+	#home-page-main, #home-page-secondary {
+		width: 750px;
+		margin: 0 auto;
+		padding: 1em 0;
+	}
 }
 
 @media only screen and
@@ -214,6 +234,10 @@ th, td {
 	#{$content_parts} {
 		width: 900px;
 		margin: 0 auto;
+	}
+	
+	#home-page-secondary {
+		width: 800px;
 	}
 	
 }

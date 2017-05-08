@@ -40,6 +40,11 @@
 	font-size: 1.5em;
 }
 
+.site-footer {
+	font-family: $header_font_stack;
+	text-align: center;
+}
+
 
 /*--------------------------------------------------------------
 # Typography
@@ -131,8 +136,9 @@ big {
 	.site-branding {
 		text-align: left;
 	}
-	
+			
 	.home-page-box-text {
 		font-size: 1.2em;
 	}
 }
+
