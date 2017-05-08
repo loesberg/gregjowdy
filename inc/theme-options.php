@@ -64,19 +64,19 @@ function greg_jowdy_home_page_boxes_page() {
 					<input type="hidden" name="greg_jowdy_home_page_boxes[order][]" value="" />
 					<tr><!-- Image -->
 						<th scope="row">
-							<label for="greg_jowdy_home_page_boxes[image][]">Image</label>
+							<label for="greg_jowdy_home_page_boxes[image][]">Image:</label>
 						</th>
 						<td>
-							<input name="greg_jowdy_home_page_boxes[image][]" class="box-image-field" type="text" size="50" value="<?php echo $box_options['image'][$i]; ?>" />
-							<input id="upload-button" type="button" class="button upload-image-button" value="Add Image" />
-							<?php echo wp_get_attachment_image( $box_options['image'][$i], 'thumbnail', false, array( 'class' => 'preview-image' ) ); ?>
+							<input name="greg_jowdy_home_page_boxes[image][]" class="box-image-field" type="hidden" size="50" value="<?php echo $box_options['image'][$i]; ?>" />
+							<input id="upload-button" type="button" class="button upload-image-button" value="Add/Change Image" />
+							<?php echo wp_get_attachment_image( $box_options['image'][$i], 'homepage_box_image_thumb', false, array( 'class' => 'preview-image' ) ); ?>
 
 						</td>
 					</tr>
 					
 					<tr><!-- Box Text -->
 						<th scope="row">
-							<label for="greg_jowdy_home_page_boxes[text][]">Box Text</label>
+							<label for="greg_jowdy_home_page_boxes[text][]">Box Text:</label>
 						</th>
 						<td>
 							<input type="text" name="greg_jowdy_home_page_boxes[text][]" size="50" value="<?php echo $box_options['text'][$i]; ?>" />
@@ -85,7 +85,7 @@ function greg_jowdy_home_page_boxes_page() {
 					
 					<tr><!-- Linked Page -->
 						<th scope="row">
-							<label for="greg_jowdy_home_page_boxes[link][]">Page to Link To</label>
+							<label for="greg_jowdy_home_page_boxes[link][]">Page to Link To:</label>
 						</th>
 						<td>
 							<select name="greg_jowdy_home_page_boxes[link][]">

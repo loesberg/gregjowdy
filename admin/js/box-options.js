@@ -32,12 +32,11 @@ var previewImage;
     file_frame.on( 'select', function() {
       // We set multiple to false so only get one image from the uploader
       attachment = file_frame.state().get('selection').first().toJSON();
-      console.log(attachment);
 
       // Add attachment URL to image field
       imageField.val(attachment.id);
       // Change preview image
-      previewImage.attr("src", attachment.url).removeAttr("srcset sizes");      
+      previewImage.attr({src: attachment.url, width: '300', height: '200'}).removeAttr("srcset sizes");      
     });
 
     // Finally, open the modal

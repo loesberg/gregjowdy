@@ -73,6 +73,7 @@ function greg_jowdy_setup() {
 * Custom image sizes
 */
 add_image_size( 'homepage_box_image', 600, 400, true );
+add_image_size( 'homepage_box_image_thumb', 300, 200, true );
 
 endif;
 add_action( 'after_setup_theme', 'greg_jowdy_setup' );
