@@ -824,7 +824,8 @@ textarea {
   color: #666;
   border: 1px solid #ccc;
   border-radius: 3px;
-  padding: 3px;
+  padding: 12px;
+  width: 100%;
 }
 
 select {
@@ -850,8 +851,10 @@ textarea:focus {
   color: #111;
 }
 
-textarea {
-  width: 100%;
+.wpcf7-form label {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
 }
 
 @media only screen and (min-width: 750px) {

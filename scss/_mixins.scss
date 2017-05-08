@@ -2,3 +2,9 @@
 	border-top: 1px solid $light-gray;
 	border-bottom: 1px solid $light-gray;
 }
+
+@mixin hide {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
