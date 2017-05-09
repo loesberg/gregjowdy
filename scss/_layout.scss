@@ -240,5 +240,45 @@ th, td {
 		width: 800px;
 	}
 	
+	.blog, .single-post {
+		
+/*
+		#content {
+			width: 95%;
+			max-width: 1000px;
+		}
+*/
+		#masthead {
+			border-bottom: 1px solid $light-gray;
+			padding-bottom: 1em;
+		}
+		
+		#primary {
+			width: 74%;
+			float: left;
+			padding-right: 3em;
+		}
+		
+		.entry-title {
+			border: none;
+			text-align: left;
+			
+			#{$a-tags} {
+				border-bottom: 1px solid $light-gray;
+				padding-bottom: 0.2em;
+			}
+		}
+		
+		#secondary {
+			width: 26%;
+			float: left;
+			margin-top: 3em;
+		}
+		
+		#{$content_parts} {
+			width: 100%;
+		}
+	}
+	
 }
 

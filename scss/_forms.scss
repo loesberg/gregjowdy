@@ -39,6 +39,11 @@ textarea {
 	border-radius: 3px;
 	padding: 12px;
 	width: 100%;
+	margin-bottom: 1em;
+	
+	.wpcf7 & {
+		margin-bottom: 0;
+	}
 }
 
 select {

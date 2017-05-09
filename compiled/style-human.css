@@ -545,6 +545,40 @@ th, td {
   #home-page-secondary {
     width: 800px;
   }
+
+  .blog, .single-post {
+    /*
+    		#content {
+    			width: 95%;
+    			max-width: 1000px;
+    		}
+    */
+  }
+  .blog #masthead, .single-post #masthead {
+    border-bottom: 1px solid #cdc9c9;
+    padding-bottom: 1em;
+  }
+  .blog #primary, .single-post #primary {
+    width: 74%;
+    float: left;
+    padding-right: 3em;
+  }
+  .blog .entry-title, .single-post .entry-title {
+    border: none;
+    text-align: left;
+  }
+  .blog .entry-title a, .blog .entry-title a:link, .blog .entry-title a:visited, .single-post .entry-title a, .single-post .entry-title a:link, .single-post .entry-title a:visited {
+    border-bottom: 1px solid #cdc9c9;
+    padding-bottom: 0.2em;
+  }
+  .blog #secondary, .single-post #secondary {
+    width: 26%;
+    float: left;
+    margin-top: 3em;
+  }
+  .blog .entry-content, .blog .entry-meta, .blog .entry-footer, .blog .comments-area, .single-post .entry-content, .single-post .entry-meta, .single-post .entry-footer, .single-post .comments-area {
+    width: 100%;
+  }
 }
 .site-branding {
   text-align: center;
@@ -855,6 +889,25 @@ textarea {
   border-radius: 3px;
   padding: 12px;
   width: 100%;
+  margin-bottom: 1em;
+}
+.wpcf7 input[type="text"], .wpcf7
+input[type="email"], .wpcf7
+input[type="url"], .wpcf7
+input[type="password"], .wpcf7
+input[type="search"], .wpcf7
+input[type="number"], .wpcf7
+input[type="tel"], .wpcf7
+input[type="range"], .wpcf7
+input[type="date"], .wpcf7
+input[type="month"], .wpcf7
+input[type="week"], .wpcf7
+input[type="time"], .wpcf7
+input[type="datetime"], .wpcf7
+input[type="datetime-local"], .wpcf7
+input[type="color"], .wpcf7
+textarea {
+  margin-bottom: 0;
 }
 
 select {
