@@ -599,6 +599,10 @@ th, td {
   font-family: "Cormorant Garamond", serif;
 }
 
+#home-page-main h3 {
+  font-size: 1.5em;
+}
+
 .entry-content, .entry-meta, .entry-footer {
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
@@ -821,10 +825,11 @@ big {
   .main-navigation {
     position: absolute;
     top: 11px;
+    right: 0;
+    width: 585px;
   }
 
   .nav-menu > li {
-    float: right;
     margin: 0 0 0 1.3em;
   }
 }
