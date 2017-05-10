@@ -33,8 +33,6 @@ get_header(); ?>
 			
 			<?php endif; ?>
 			
-			<div class="border"></div>
-
 			<div id="home-page-boxes">
 				<?php echo greg_jowdy_show_home_page_boxes(); ?>					
 			</div>
