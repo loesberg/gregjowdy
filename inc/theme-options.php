@@ -76,7 +76,7 @@ function greg_jowdy_home_page_boxes_page() {
 								if ( $image != '' ) {
 									echo $image;
 								} else {
-									echo '<img src='' class="preview-image" width="300" height="200" />';
+									echo '<img src="" class="preview-image" width="300" height="200" />';
 								}
 							?>
 
