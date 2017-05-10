@@ -45,6 +45,7 @@ function greg_jowdy_home_page_boxes_page() {
 			'post_status' => 'publish',
 			'posts_per_page' => -1,
 			'orderby' => 'title',
+			'order' => 'ASC',
 		)	
 	);
 	?>
@@ -69,7 +70,15 @@ function greg_jowdy_home_page_boxes_page() {
 						<td>
 							<input name="greg_jowdy_home_page_boxes[image][]" class="box-image-field" type="hidden" size="50" value="<?php echo $box_options['image'][$i]; ?>" />
 							<input id="upload-button" type="button" class="button upload-image-button" value="Add/Change Image" />
-							<?php echo wp_get_attachment_image( $box_options['image'][$i], 'homepage_box_image_thumb', false, array( 'class' => 'preview-image' ) ); ?>
+							<?php 
+								$image = wp_get_attachment_image( $box_options['image'][$i], 'homepage_box_image_thumb', false, array( 'class' => 'preview-image' ) ); 
+								
+								if ( $image != '' ) {
+									echo $image;
+								} else {
+									echo '<img src='' class="preview-image" width="300" height="200" />';
+								}
+							?>
 
 						</td>
 					</tr>
