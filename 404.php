@@ -18,7 +18,7 @@ get_header(); ?>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
-					<p><?php esc_html_e( 'You tried to find something that isn\'t here. Try the navigation menu above.', 'greg-jowdy' ); ?></p>
+					<p style="text-align: center;"><?php esc_html_e( 'You tried to find something that isn\'t here. Try the navigation menu above.', 'greg-jowdy' ); ?></p>
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
 
