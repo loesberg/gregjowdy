@@ -22,6 +22,7 @@ get_header(); ?>
 			<div id="home-page-main" class="clear">
 				<?php echo greg_jowdy_get_custom_content( 'home_page_primary' ); ?>
 			</div>
+			<div id="home-page-contact"><a href="/contact"><?php echo greg_jowdy_contact_button(); ?></a></div>
 			
 			<?php if ( greg_jowdy_get_custom_content( 'home_page_secondary') ) : ?>
 			<div class="border"></div>
