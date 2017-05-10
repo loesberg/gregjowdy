@@ -616,6 +616,10 @@ th, td {
   font-family: "Cormorant Garamond", serif;
 }
 
+#home-page-secondary {
+  font-size: 1.2em;
+}
+
 .home-page-box {
   text-align: center;
 }
@@ -640,7 +644,7 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;

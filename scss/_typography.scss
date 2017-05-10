@@ -1,3 +1,5 @@
+
+
 .site-branding {
 	text-align: center;
 }
@@ -34,6 +36,10 @@
 	font-family: $header_font_stack;
 }
 
+#home-page-secondary {
+	font-size: 1.2em;
+}
+
 .home-page-box {
 	text-align: center;
 }
@@ -59,7 +65,7 @@ input,
 select,
 textarea {
 	color: #404040;
-	font-family: sans-serif;
+	font-family: $body_font_stack;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
