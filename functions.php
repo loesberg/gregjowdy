@@ -114,7 +114,7 @@ add_action( 'widgets_init', 'greg_jowdy_widgets_init' );
 function greg_jowdy_scripts() {
 	
 	// Stylesheet
-	wp_enqueue_style( 'greg-jowdy-style', get_stylesheet_uri() );
+// 	wp_enqueue_style( 'greg-jowdy-style', get_stylesheet_uri() );
 	
 	// Minified and aggregated JS
 	wp_enqueue_script( 'greg-jowdy-script', get_template_directory_uri() . '/js/script.min.js', array( 'jquery' ), time(), true );

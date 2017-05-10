@@ -17,6 +17,8 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<h1 class="page-title"><?php echo get_option( 'greg_jowdy_home_page_title', 'Welcome' ); ?></h1>
+			
+			<?php if ( current_user_can(  'administrator' ) ) echo '<p><a href="/wp-admin/themes.php?page=greg-jowdy-home-page-content">Edit This</a></p>'; ?>
 			<div id="home-page-main" class="clear">
 				<?php echo greg_jowdy_get_custom_content( 'home_page_primary' ); ?>
 			</div>
