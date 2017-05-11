@@ -334,7 +334,7 @@ table {
 }
 
 .site-footer {
-  padding-top: 2rem;
+  padding-top: 1em;
   border-top: 1px solid #cdc9c9;
 }
 
@@ -551,7 +551,7 @@ th, td {
     width: 800px;
   }
 
-  .blog, .single-post {
+  .blog, .single-post, .page-template-page-sidebar {
     /*
     		#content {
     			width: 95%;
@@ -559,29 +559,29 @@ th, td {
     		}
     */
   }
-  .blog #masthead, .single-post #masthead {
+  .blog #masthead, .single-post #masthead, .page-template-page-sidebar #masthead {
     border-bottom: 1px solid #cdc9c9;
     padding-bottom: 1em;
   }
-  .blog #primary, .single-post #primary {
+  .blog #primary, .single-post #primary, .page-template-page-sidebar #primary {
     width: 74%;
     float: left;
     padding-right: 3em;
   }
-  .blog .entry-title, .single-post .entry-title {
+  .blog .entry-title, .single-post .entry-title, .page-template-page-sidebar .entry-title {
     border: none;
     text-align: left;
   }
-  .blog .entry-title a, .blog .entry-title a:link, .blog .entry-title a:visited, .single-post .entry-title a, .single-post .entry-title a:link, .single-post .entry-title a:visited {
+  .blog .entry-title a, .blog .entry-title a:link, .blog .entry-title a:visited, .single-post .entry-title a, .single-post .entry-title a:link, .single-post .entry-title a:visited, .page-template-page-sidebar .entry-title a, .page-template-page-sidebar .entry-title a:link, .page-template-page-sidebar .entry-title a:visited {
     border-bottom: 1px solid #cdc9c9;
     padding-bottom: 0.2em;
   }
-  .blog #secondary, .single-post #secondary {
+  .blog #secondary, .single-post #secondary, .page-template-page-sidebar #secondary {
     width: 26%;
     float: left;
     margin-top: 3em;
   }
-  .blog .entry-content, .blog .entry-meta, .blog .entry-footer, .blog .comments-area, .single-post .entry-content, .single-post .entry-meta, .single-post .entry-footer, .single-post .comments-area {
+  .blog .entry-content, .blog .entry-meta, .blog .entry-footer, .blog .comments-area, .single-post .entry-content, .single-post .entry-meta, .single-post .entry-footer, .single-post .comments-area, .page-template-page-sidebar .entry-content, .page-template-page-sidebar .entry-meta, .page-template-page-sidebar .entry-footer, .page-template-page-sidebar .comments-area {
     width: 100%;
   }
 }
