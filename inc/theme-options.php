@@ -253,7 +253,7 @@ function greg_jowdy_contact_button() {
 	
 	if ( $contact_button ) {
 		$display = '<a href="' . get_permalink( $contact_button['page_id'] ) . '">';
-		$display .= $contact_button['text'];
+		$display .= '<button class="contact-button">' . $contact_button['text'] . '</button>';
 		$display .= '</a>';
 	} else {
 		$display = "Your button needs settings.";
