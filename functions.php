@@ -214,13 +214,17 @@ function greg_jowdy_show_home_page_secondary_content() {
 /**
 * Contact button
 */
-function greg_jowdy_contact_button() {
-	
-	$button = "<button class='contact-button'>Contact Me</button>";
-	
-	return $button;
+/*
+if ( !function_exists( 'greg_jowdy_contact_button' ) ) {
+	function greg_jowdy_contact_button() {
+		
+		$button = "<button class='contact-button'>Contact Me</button>";
+		
+		return $button;
+	}
+	add_shortcode( 'contact_button', 'greg_jowdy_contact_button' );
 }
-add_shortcode( 'contact_button', 'greg_jowdy_contact_button' );
+*/
 
 /**
 * Shortcode for getting the full year (mostly for the footer)

@@ -8,6 +8,7 @@ function greg_jowdy_admin_menu() {
 	add_theme_page( 'Footer Content', 'Footer Content', 'manage_options', 'greg-jowdy-footer-content', 'greg_jowdy_footer_content_page' );
 	add_theme_page( 'Home Page Content', 'Home Page', 'manage_options', 'greg-jowdy-home-page-content', 'greg_jowdy_home_page_content_page' );
 	add_theme_page( 'Home Page Boxes', 'Boxes', 'manage_options', 'greg-jowdy-home-page-boxes', 'greg_jowdy_home_page_boxes_page' );
+	add_theme_page( 'Contact Button', 'Contact Button', 'manage_options', 'greg-jowdy-contact-button', 'greg_jowdy_contact_button_page' );
 	
 	// Register settings
 	add_action( 'admin_init', 'greg_jowdy_register_theme_settings' );
@@ -30,15 +31,16 @@ function greg_jowdy_register_theme_settings() {
 	
 	// Home page boxes custom settings
 	register_setting( 'greg_jowdy_home_page_boxes_group', 'greg_jowdy_home_page_boxes' );
+	
+	// Contact button
+	register_setting( 'greg_jowdy_contact_button_group', 'greg_jowdy_contact_button' );
 }
 
 /**
-* Home page boxes page.
+* Function for generating a drop-down menu of published pages
 */
-function greg_jowdy_home_page_boxes_page() {
+function greg_jowdy_pages_drop_down_menu( $option_name, $option_value = NULL ) {
 	
-	$box_options = get_option( 'greg_jowdy_home_page_boxes' );
-	// Get all pages
 	$pages = get_posts( 
 		array(
 			'post_type' => 'page',
@@ -48,6 +50,30 @@ function greg_jowdy_home_page_boxes_page() {
 			'order' => 'ASC',
 		)	
 	);
+	
+	$drop_down = '<select name="'. $option_name . '">';
+	
+	foreach ( $pages as $page ) {
+		$drop_down .= '<option value="' . $page->ID . '"';
+		if ( $option_value == $page->ID ) {
+			$drop_down .= ' selected';
+		}
+		$drop_down .= '>';
+		$drop_down .= $page->post_title;
+		$drop_down .= '</option>';
+	}
+	
+	$drop_down .= '</select>';
+	
+	return $drop_down;
+}
+
+/**
+* Home page boxes page.
+*/
+function greg_jowdy_home_page_boxes_page() {
+	
+	$box_options = get_option( 'greg_jowdy_home_page_boxes' );
 	?>
 	<div class="wrap">
 		<h1>Home Page Boxes</h1>
@@ -97,18 +123,7 @@ function greg_jowdy_home_page_boxes_page() {
 							<label for="greg_jowdy_home_page_boxes[link][]">Page to Link To:</label>
 						</th>
 						<td>
-							<select name="greg_jowdy_home_page_boxes[link][]">
-								<?php
-									foreach ( $pages as $page ) {
-										echo '<option value="' . $page->ID . '"';
-										if ( $box_options['link'][$i] == $page->ID ) {
-											echo " selected";
-										}
-										
-										echo '>' . $page->post_title . '</option>';
-									}
-								?>
-							</select>
+							<?php echo greg_jowdy_pages_drop_down_menu( 'greg_jowdy_home_page_boxes[link][]', $box_options['link'][$i]); ?>
 						</td>
 					</tr>
 				</table>
@@ -195,3 +210,55 @@ function greg_jowdy_home_page_content_page() {
 		</form>
 	</div>
 <?php }
+	
+/**
+* Contact button settings page
+*/
+function greg_jowdy_contact_button_page() {
+	$contact_button = get_option( 'greg_jowdy_contact_button' );
+	?>
+	<div class="wrap">
+		<h1>Contact Button</h1>
+		<p>Use this page to change the text of the contact button, and the page that it links to. <strong>These settings affect the contact button everywhere it appears on the site.</strong></p>
+		<p>Use the following shortcode to place the button in a post or a page: 
+			<pre>[greg-jowdy-contact-button]</pre>
+		</p>
+		<?php settings_errors(); ?>
+		<form method="post" action="options.php">
+			<?php
+				settings_fields( 'greg_jowdy_contact_button_group' );
+				do_settings_sections( 'greg_jowdy_contact_button_group' );
+			?>
+			<table class="form-table">
+				<tr><!-- Button Text -->
+					<th scope="row"><label for="contact-button-text">Button Text:</label></th>
+					<td><input id="contact-button-text" type="text" name="greg_jowdy_contact_button[text]" value="<?php echo $contact_button['text']; ?>" /></td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="contact-button-page">Contact Page:</label></th>
+					<td><?php echo greg_jowdy_pages_drop_down_menu( 'greg_jowdy_contact_button[page_id]',  $contact_button['page_id'] ); ?></td>
+				</tr>
+			</table>
+			<?php submit_button(); ?>
+		</form>
+	</div>
+<?}
+	
+/**
+* Contact button display, with shortcode
+*/
+function greg_jowdy_contact_button() {
+	
+	$contact_button = get_option( 'greg_jowdy_contact_button' );
+	
+	if ( $contact_button ) {
+		$display = '<a href="' . get_permalink( $contact_button['page_id'] ) . '">';
+		$display .= $contact_button['text'];
+		$display .= '</a>';
+	} else {
+		$display = "Your button needs settings.";
+	}
+	
+	return $display;
+}
+add_shortcode( 'greg-jowdy-contact-button', 'greg_jowdy_contact_button');
