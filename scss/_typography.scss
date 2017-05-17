@@ -140,6 +140,11 @@ big {
 	font-size: 125%;
 }
 
+.serif-font {
+	font-family: $header_font_stack;
+	font-size: 1.3rem;
+}
+
 @media only screen and
 (min-width: $tablet) {
 	

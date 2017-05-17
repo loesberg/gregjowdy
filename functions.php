@@ -212,21 +212,6 @@ function greg_jowdy_show_home_page_secondary_content() {
 }
 
 /**
-* Contact button
-*/
-/*
-if ( !function_exists( 'greg_jowdy_contact_button' ) ) {
-	function greg_jowdy_contact_button() {
-		
-		$button = "<button class='contact-button'>Contact Me</button>";
-		
-		return $button;
-	}
-	add_shortcode( 'contact_button', 'greg_jowdy_contact_button' );
-}
-*/
-
-/**
 * Shortcode for getting the full year (mostly for the footer)
 */
 function greg_jowdy_get_year() {
@@ -236,6 +221,39 @@ function greg_jowdy_get_year() {
 	return $year;
 }
 add_shortcode( 'copyright_year', 'greg_jowdy_get_year' );
+
+/**
+ * Add format menu to MCE editor.
+ */
+function greg_jowdy_mce_buttons( $buttons ) {
+	
+	array_unshift( $buttons, 'styleselect' );
+	return $buttons;
+}
+add_filter( 'mce_buttons_2', 'greg_jowdy_mce_buttons' );
+
+/**
+ * Callback function for adding styles to the drop-down format edtir.
+ */
+function greg_jowdy_mce_before_init_insert_formats( $init_array ) {
+	
+	$style_formats = array(
+		
+		// Serif font style
+		array(
+			'title' => 'Serif Font',
+			'inline' => 'span',
+			'classes' => 'serif-font',
+			'wrapper' => false,
+		),
+	);
+	
+	$init_array['style_formats'] = json_encode( $style_formats );
+	
+	return $init_array;
+}
+add_filter( 'tiny_mce_before_init', 'greg_jowdy_mce_before_init_insert_formats' );
+
 
 
 /**
