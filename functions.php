@@ -70,6 +70,14 @@ function greg_jowdy_setup() {
 }
 
 /**
+* Register editor stylesheet
+*/
+function greg_jowdy_add_editor_styles() {
+	add_editor_style( 'admin/css/editor-style.css' );
+}
+add_action( 'admin_init', 'greg_jowdy_add_editor_styles' );
+
+/**
 * Custom image sizes
 */
 add_image_size( 'homepage_box_image', 600, 400, true );

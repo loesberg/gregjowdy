@@ -1,0 +1,8 @@
+body#tinymce.wp-editor {
+	font-family: "Open Sans", sans-serif;
+}
+
+body#tinymce.wp-editor .serif-font {
+	font-family: "Cormorant Garamond", serif;
+	font-size: 1.3rem;
+}
